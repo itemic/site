@@ -1,7 +1,7 @@
 ---
 layout: home
-title: Test
+title: Home Page
 permalink: /
 section: home
-intro_paragraph: Keeping text here.
+intro_paragraph:
 ---
