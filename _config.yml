@@ -39,6 +39,9 @@ sass:
   style: compressed
   sass_dir: _sass
 
+plugins:
+  - jekyll-postcss
+
 # Compress HTML (in liquid via layouts/compress.html)
 compress_html:
   clippings: all

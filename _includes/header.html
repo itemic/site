@@ -1,12 +1,24 @@
 <header>
+  <nav
+    class="mt-2 md:flex justify-center md:justify-center items-center border-b-2 border-gray-100 py-4 md:space-x-10"
+  >
+    <!-- Title -->
+    <!-- <div class="md:flex w-full md:w-auto text-right text-bold mt-5 md:mt-0 border-t-2 border-blue-900 md:border-none">
+      <a href="{{ "/" | relative_url }}" class="text-gray-700 dark:text-blue-200 mr-4 hover:text-blue-500">{{ site.title | escape }}</a>
+    </div> -->
 
-  <h1>
-    <a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
-  </h1>
-
-
-  <nav>
-    {% include navigation.html navigation=site.data.navigation %}
+    <!-- Buttons -->
+    <div
+      class="md:flex w-full md:w-auto text-right text-bold mt-5 md:mt-0 border-t-2 border-blue-900 md:border-none space-x-4"
+    >
+      {% for item in site.data.navigation %}
+      <a
+        href="{{ item.url }}"
+        class="bg-blue-200 hover:bg-blue-700 hover:text-blue-900 px-3 py-2 rounded-md text-sm font-medium"
+      >
+        {{ item.text }}
+      </a>
+      {% endfor %}
+    </div>
   </nav>
-
 </header>
