@@ -8,16 +8,15 @@
   <title>{{ page.title }}</title>
   {% if page.meta_description %}
   <meta name="description" content="{{ page.meta_description }}" />
-  {% endif %} {% endif %}
-  <!-- <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}"> -->
-
-  <!-- <link rel="stylesheet" href={{ /tailwindcss/tw.css | -->
-  <!-- relative_url" }} /> -->
-  {% if jekyll.environment == 'production' and site.analytics %} {% include
-  analytics.html %} {% endif %}
+  {% endif %} {% endif %} {% if jekyll.environment == 'production' and
+  site.analytics %} {% include analytics.html %} {% endif %}
   <script
     async
     src="https://identity.netlify.com/v1/netlify-identity-widget.js"
   ></script>
+  <script type="text/javascript" src="/assets/main.js"></script>
   <link rel="stylesheet" href="/tailwindcss/tw.css" />
+  <script type="text/javascript">
+    let iam = [{% for iam in site.data.iam %}"{{ iam }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
+  </script>
 </head>
