@@ -2,28 +2,47 @@
 layout: default
 ---
 
-<div class="mt-12 mx-auto w-8/12 md:w-8/12 lg:max-w-7xl">
+<div class="bg-gray-50">
+  <!-- MARK Header Text -->
+  <div class="max-w-7xl mx-auto pt-6 px-4 sm:px-6 lg:px-8">
+    <h2 class="text-4xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
+      <span class="block text-light-blue-600"> Blog </span>
+    </h2>
+  </div>
+  <!-- MARK Some other text -->
+  <div class="max-w-7xl mx-auto py-1 px-4 sm:px-6 lg:px-8 lg:flex">
+    <div
+      class="prose-lg prose-light-blue prose-sm sm:prose lg:prose-lg xl:prose-xl"
+    >
+      A blog.
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto py-1 px-4 sm:px-6 lg:px-8 lg:flex">
+    <section>
+      <!-- <h3>Posts</h3> -->
+
+      <ul>
+        {% for post in site.posts %} {% assign author =
+        site.data.authors[post.author] %}
+        <li>
+          <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+          <time datetime="{{ post.date }}">
+            <small>
+              <strong>{{ post.date | date_to_string }}</strong>
+              {% if author %} by {{ author.name }} {% endif %}
+            </small>
+          </time>
+          {{ post.excerpt | strip_newlines | truncate: 180 }}
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+  </div>
+</div>
+
+<!-- <div class="mt-12 mx-auto w-8/12 md:w-8/12 lg:max-w-7xl">
   <h2>{{ page.title }}</h2>
 
-  {% include page-intro.html %} {{ content }}
+  {% include page-intro.html %} {{ content }} -->
 
-  <section>
-    <!-- <h3>Posts</h3> -->
-
-    <ul>
-      {% for post in site.posts %} {% assign author =
-      site.data.authors[post.author] %}
-      <li>
-        <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
-        <time datetime="{{ post.date }}">
-          <small>
-            <strong>{{ post.date | date_to_string }}</strong>
-            {% if author %} by {{ author.name }} {% endif %}
-          </small>
-        </time>
-        {{ post.excerpt | strip_newlines | truncate: 180 }}
-      </li>
-      {% endfor %}
-    </ul>
-  </section>
-</div>
+<!-- </div> -->

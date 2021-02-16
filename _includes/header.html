@@ -8,18 +8,18 @@
     </div> -->
 
     <!-- Buttons -->
-    <div class="flex w-auto text-center text-bold my-2 space-x-4">
+    <div class="flex w-auto text-center my-2 space-x-4">
       {% for item in site.data.navigation %} {% if item.url == navurl %}
       <a
         href="{{ item.url }}"
-        class="bg-light-blue-300 hover:bg-light-blue-500 hover:text-light-blue-900 px-3 py-2 rounded-md text-sm font-semibold"
+        class="hover:text-gray-900 text-gray-900 px-3 py-2 rounded-md text-base font-normal"
       >
         {{ item.text }}
       </a>
       {% else %}
       <a
         href="{{ item.url }}"
-        class="bg-light-blue-200 hover:bg-light-blue-500 hover:text-light-blue-900 px-3 py-2 rounded-md text-sm font-medium"
+        class="hover:text-gray-800 text-gray-400 px-3 py-2 rounded-md text-base font-light"
       >
         {{ item.text }}
       </a>

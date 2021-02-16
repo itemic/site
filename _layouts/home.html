@@ -39,39 +39,26 @@ layout: default
   <div class="max-w-max mx-auto py-6 px-0 sm:px-0 md:px-0 lg:py-2 lg:py-8">
     <!--  BEGIN GRID -->
     <div class="grid grid-cols-1 gap-0 sm:grid-cols-1 md:grid-cols-2">
+      {% for item in site.data.projects %}
       <div
-        class="flex flex-col bg-gradient-to-b from-amber-300 to-yellow-400 mx-auto w-full text-center justify-center mx-auto px-4 pt-4"
+        class="flex flex-col bg-gradient-to-b from-{{ item.color-s }} to-{{ item.color-e }} mx-auto w-full text-center justify-center mx-auto px-4 pt-4"
       >
         <h2 class="w-full text-5xl font-semibold tracking-tighter">
-          LiveRail HSR
+          {{ item.title }}
         </h2>
         <h2 class="w-full text-2xl font-light tracking-wide">
-          High Speed Rail departures board in SwiftUI
+          {{ item.description }}
         </h2>
-        <a class="text-light-blue-600 py-4" href="#">Explore project ></a>
+        <a class="text-light-blue-600 py-4" href="{{ item.url }}"
+          >Explore project ></a
+        >
         <img
-          class="w-1/2 pt-2 place-self-center align-bottom"
-          src="/assets/img/railtimehsr.png"
+          class="w-1/2 flex-1 pt-2 mb-0 pb-0 place-self-center align-bottom"
+          src="/assets/img/{{ item.img }}"
           alt="RailTime Screenshot"
         />
       </div>
-
-      <div
-        class="flex flex-col bg-gradient-to-b from-light-blue-400 to-cyan-300 mx-auto w-full text-center justify-center mx-auto px-4 pt-4"
-      >
-        <h2 class="w-full text-5xl font-semibold tracking-tighter">
-          Placeholder Project
-        </h2>
-        <h2 class="w-full text-2xl font-light tracking-wide">
-          Something will fill this place soon...
-        </h2>
-        <a class="text-light-blue-600 py-4" href="#">Explore project...? ></a>
-        <img
-          class="w-1/4 pt-2 place-self-center align-bottom"
-          src="/assets/img/questionmark.png"
-          alt="Placeholder"
-        />
-      </div>
+      {% endfor %}
     </div>
   </div>
 </div>

@@ -7,6 +7,4 @@ section: about
 intro_paragraph:
 ---
 
-# About Terran
-
-Do I write this in the first or third person?
+This page is still a work in progress so please bear with me as I bring this site up to date at (hopefully) a regular pace.
