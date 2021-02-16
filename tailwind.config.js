@@ -22,6 +22,9 @@ module.exports = {
         lime: colors.lime,
       },
     },
+    height: {
+      half: "50vh",
+    },
   },
   darkMode: "media",
   plugins: [
