@@ -1,3 +1,3 @@
 function randomIAm() {
-  return iam[Math.floor(Math.random() * iam.length)];
+  document.write(iam[Math.floor(Math.random() * iam.length)]);
 }
