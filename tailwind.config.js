@@ -13,6 +13,10 @@ module.exports = {
       "./**/*..yml",
     ],
     safelist: [/^from-/, /^to-/], // Retain all classes starting with...
+    options: {
+      safelist: [/^from-/, /^to-/],
+      whitelist: [/^from-/, /^to-/],
+    },
   },
   theme: {
     extend: {
