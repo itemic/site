@@ -12,7 +12,7 @@ module.exports = {
       "./**/*..md",
       "./**/*..yml",
     ],
-    whitelistPatterns: [/^from-/, /^to-/], // Retain all classes starting with...
+    safelist: [/^from-/, /^to-/], // Retain all classes starting with...
   },
   theme: {
     extend: {
