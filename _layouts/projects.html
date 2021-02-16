@@ -25,7 +25,7 @@ layout: default
     <div class="grid grid-cols-1 gap-0 sm:grid-cols-1 md:grid-cols-2">
       {% for item in site.data.projects %}
       <div
-        class="flex flex-col bg-gradient-to-b from-{{ item.color-s }} to-{{ item.color-e }} mx-auto w-full text-center justify-center mx-auto px-4 pt-4"
+        class="flex flex-col bg-gradient-to-b {{ item.color-s }} {{ item.color-e }} mx-auto w-full text-center justify-center mx-auto px-4 pt-4"
       >
         <h2 class="w-full text-5xl font-semibold tracking-tighter">
           {{ item.title }}
