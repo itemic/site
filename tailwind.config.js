@@ -11,8 +11,8 @@ module.exports = {
       "./**/*..js",
       "./**/*..md",
       "./**/*..yml",
-      "/**/*..yml",
     ],
+    whitelistPatterns: [/^from-/, /^to-/], // Retain all classes starting with...
   },
   theme: {
     extend: {
