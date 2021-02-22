@@ -2,8 +2,6 @@
 layout: default
 ---
 
-{% assign rng = site.data.iam | sample %}
-
 <div class="bg-gray-50">
   <!-- MARK Header Text -->
   <div
@@ -15,50 +13,42 @@ layout: default
       <span class="block">Hi, I'm Terran.</span>
       <span class="block text-light-blue-600">
         <script>
-          randomIAm();
+          randomIAm()
         </script>
       </span>
     </h2>
   </div>
   <!-- MARK Some other text -->
-  <div class="max-w-7xl mx-auto py-2 px-4 sm:px-6 lg:py-4 lg:px-8 lg:flex">
+  <div class="max-w-7xl mx-auto py-2 px-4 sm:px-6 lg:py-4 lg:px-8">
     <div
       class="prose prose-light-blue prose-sm sm:prose lg:prose-lg xl:prose-xl"
     >
-      Some placeholder bio text will ultimately be located here once I have
-      generated that text. Below you'll see a short curation of the latest
-      projects I've been working on. I'm still working on updating this website
-      so keep in mind things aren't fully complete yet. I'll also put some
-      social media details somewhere here too.
+      <p>
+        I'm a software engineer and world-traveller, and soon to be a student
+        again! My range of interests include application design, public transit
+        (especially signage), and
+        <script>
+          randomThird()
+        </script>
+      </p>
+      <p>
+        Anyway, you're here now. Might as well take a look at what I've been
+        working on. Or get in touch with me.
+      </p>
     </div>
-  </div>
-</div>
-
-<div class="bg-gray-50">
-  <!-- MARK Header Text -->
-  <div class="max-w-max mx-auto py-6 px-0 sm:px-0 md:px-0 lg:py-2 lg:py-8">
-    <!--  BEGIN GRID -->
-    <div class="grid grid-cols-1 gap-0 sm:grid-cols-1 md:grid-cols-2">
-      {% for item in site.data.projects %}
-      <div
-        class="flex flex-col bg-gradient-to-b {{ item.color-s }} {{ item.color-e }} mx-auto w-full text-center justify-center mx-auto px-4 pt-4"
+    <p class="pt-4">
+      <a class="text-linkedin" href="https://www.linkedin.com/in/terrankroft/"
+        >LinkedIn</a
       >
-        <h2 class="w-full text-5xl font-semibold tracking-tighter">
-          {{ item.title }}
-        </h2>
-        <h2 class="w-full text-2xl font-light tracking-wide">
-          {{ item.description }}
-        </h2>
-        <a class="text-light-blue-600 py-4" href="{{ item.url }}"
-          >Explore project ></a
-        >
-        <img
-          class="w-1/2 flex-1 pt-2 mb-0 pb-0 place-self-center align-bottom"
-          src="/assets/img/{{ item.img }}"
-          alt="RailTime Screenshot"
-        />
-      </div>
-      {% endfor %}
-    </div>
+      |
+      <a class="text-github" href="https://github.com/itemic">GitHub</a> |
+      <a class="text-twitter" href="https://www.twitter.com/itemic">Twitter</a>
+      |
+      <a
+        class="bg-clip-text text-transparent bg-gradient-to-r from-amber-500 via-red-400 to-indigo-500"
+        href="https://www.instagram.com/ekisigns"
+        >Instagram</a
+      >
+    </p>
   </div>
 </div>

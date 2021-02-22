@@ -5,40 +5,45 @@ layout: default
 <div class="bg-gray-50">
   <!-- MARK Header Text -->
   <div class="max-w-7xl mx-auto pt-6 px-4 sm:px-6 lg:px-8">
-    <h2 class="text-4xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
+    <!-- <h2 class="text-4xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
       <span class="block text-light-blue-600"> My Projects </span>
-    </h2>
+    </h2> -->
   </div>
   <!-- MARK Some other text -->
   <div class="max-w-7xl mx-auto py-1 px-4 sm:px-6 lg:px-8 lg:flex">
     <div
       class="prose-lg prose-light-blue prose-sm sm:prose lg:prose-lg xl:prose-xl"
     >
-      Some things I worked on.
+      {{ content }}
     </div>
   </div>
 </div>
 
 <div class="bg-gray-50">
-  <div class="max-w-max mx-auto py-6 px-0 sm:px-0 md:px-0 lg:py-2 lg:py-8">
+  <!-- MARK Header Text -->
+  <div class="w-full py-6 px-0 sm:px-0 md:px-0 lg:py-2 lg:py-8">
     <!--  BEGIN GRID -->
     <div class="grid grid-cols-1 gap-0 sm:grid-cols-1 md:grid-cols-2">
-      {% for item in site.data.projects %}
+      {% for project in site.projects %} {% assign remainder = forloop.length |
+      modulo: 2 %}
       <div
-        class="flex flex-col bg-gradient-to-b {{ item.color-s }} {{ item.color-e }} mx-auto w-full text-center justify-center mx-auto px-4 pt-4"
+        class="flex flex-col overflow-hidden bg-gradient-to-b {{ project.color-s }} {{ project.color-e }} mx-auto text-center w-full justify-center mx-auto pt-4 {% if forloop.last and remainder == 1 %} sm:col-span-1 md:col-span-2 {% endif %}"
       >
-        <h2 class="w-full text-5xl font-semibold tracking-tighter">
-          {{ item.title }}
+        <h2 class="w-full text-5xl mt-4 font-semibold tracking-tighter">
+          {{ project.title }}
         </h2>
         <h2 class="w-full text-2xl font-light tracking-wide">
-          {{ item.description }}
+          {{ project.blurb }}
         </h2>
-        <a class="text-light-blue-600 py-4" href="{{ item.url }}"
+        <p>{{ project.description }}</p>
+        <a
+          class="place-self-center text-light-blue-600 w-max py-1 mt-3 px-3 ring-2 bg-white rounded-full"
+          href="{{ project.url }}"
           >Explore project ></a
         >
         <img
-          class="w-1/2 flex-1 pt-2 mb-0 pb-0 place-self-center align-bottom"
-          src="/assets/img/{{ item.img }}"
+          class="w-1/2 {% if forloop.last and remainder == 1 %} sm:w-1/2 md:w-1/4 {% endif %} flex-1 mt-4 mb-0 pb-0 place-self-center align-bottom"
+          src="/assets/img/{{ project.img }}"
           alt="RailTime Screenshot"
         />
       </div>

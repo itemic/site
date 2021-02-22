@@ -1,0 +1,17 @@
+# specify stuff for the "i am" @ home page
+
+iam:
+  - 'print(\"hello, world\")'
+  - "Hi, Terran. I'm dad."
+  - "你好！"
+  - 'System.out.println("hello, world")'
+
+third:
+  - "random item generation."
+  - "trains (is this repetitive?)"
+  - "learning."
+  - "typography."
+  - "tea."
+  - "puns."
+  - "PowerPoint animation."
+  - "realizing you can actually see all the choices that randomly populate this third item because of the way my site is set up."

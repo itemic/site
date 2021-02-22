@@ -1,7 +1,7 @@
 {% assign navurl = page.url | remove: 'index.html' %}
 
 <header>
-  <nav class="flex justify-center items-center py-2 bg-gray-50">
+  <nav class="flex fixed w-full justify-center items-center py-1 frosted">
     <!-- Title -->
     <!-- <div class="md:flex w-full md:w-auto text-right text-bold mt-5 md:mt-0 border-t-2 border-blue-900 md:border-none">
       <a href="{{ "/" | relative_url }}" class="text-gray-700 dark:text-blue-200 mr-4 hover:text-blue-500">{{ site.title | escape }}</a>
@@ -12,14 +12,14 @@
       {% for item in site.data.navigation %} {% if item.url == navurl %}
       <a
         href="{{ item.url }}"
-        class="hover:text-gray-900 text-gray-900 px-3 py-2 rounded-md text-base font-normal"
+        class="hover:text-gray-900 text-gray-900 px-3 py-1 rounded-md text-base font-normal"
       >
         {{ item.text }}
       </a>
       {% else %}
       <a
         href="{{ item.url }}"
-        class="hover:text-gray-800 text-gray-400 px-3 py-2 rounded-md text-base font-light"
+        class="hover:text-gray-800 text-gray-400 px-3 py-1 rounded-md text-base font-light"
       >
         {{ item.text }}
       </a>

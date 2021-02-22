@@ -1,5 +1,5 @@
 // Figure this out
-const colors = require("tailwindcss/colors");
+const colors = require("tailwindcss/colors")
 
 module.exports = {
   purge: {
@@ -12,10 +12,10 @@ module.exports = {
       "./**/*..md",
       "./**/*..yml",
     ],
-    safelist: [/^from-/, /^to-/], // Retain all classes starting with...
+    safelist: [/^from-/, /^to-/, /^text-/], // Retain all classes starting with...
     options: {
-      safelist: [/^from-/, /^to-/],
-      whitelist: [/^from-/, /^to-/],
+      safelist: [/^from-/, /^to-/, /^text-/],
+      whitelist: [/^from-/, /^to-/, /^text-/],
     },
   },
   theme: {
@@ -26,6 +26,12 @@ module.exports = {
         white: colors.white,
         amber: colors.amber,
         lime: colors.lime,
+        orange: colors.orange,
+      },
+      textColor: {
+        linkedin: "#0061a2",
+        github: "#767676",
+        twitter: "#178def",
       },
     },
     height: {
@@ -37,4 +43,4 @@ module.exports = {
     require("@tailwindcss/typography"),
     require("@mjwebs/tailwindcss-frosted"),
   ],
-};
+}
