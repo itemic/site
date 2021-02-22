@@ -1,13 +1,13 @@
 ---
 layout: project
-title: LiveRail HSR
-blurb: "HSR departures board"
-description: "A simple-to-use high speed rail timetable app built completely with SwiftUI."
-color-s: "from-amber-300"
-color-e: "to-yellow-400"
+title: Squidly
+blurb: "Surface Hub prototyping tool"
+description: "Collaborative game prototyping tool for the Surface Hub."
+color-s: "from-green-300"
+color-e: "to-cyan-400"
 color: "orange-400"
-color-t: "text-orange-400"
-img: "railtimehsr.png"
+color-t: "text-light-blue-400"
+img: "questionmark.png"
 live: ""
 live-text: ""
 repo: "https://github.com/itemic/LiveRail"
@@ -15,9 +15,9 @@ repo-text: "View on GitHub"
 visit: "https://apps.apple.com/app/live-rail-for-hsr/id1550589269"
 visit-text: "Download on the App Store"
 technologies:
-  - "SwiftUI"
-permalink: /projects/liverail
-intro_paragraph: Live Rail is the first "real" personal project that I shipped. I've always wanted to ship an iOS app, and a transit app would be a perfect starting point as it combines personal interest and real-world utility.
+  - "C#"
+permalink: /projects/squidly
+intro_paragraph: Part IV Project. Placeholder text. More to come.
 ---
 
 ## Purpose & Motivation
