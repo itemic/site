@@ -2,7 +2,7 @@
 
 iam:
   - 'print(\"hello, world\")'
-  - "Hi, Terran. I'm dad."
+  - "Hi, Terran. I'm... a website."
   - "你好！"
   - 'System.out.println(\"hello, world\")'
 
