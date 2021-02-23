@@ -11,9 +11,9 @@ img: "railtimehsr.png"
 live: "https://liverail.terrankroft.com"
 live-text: "Website"
 repo: "https://github.com/itemic/LiveRail"
-repo-text: "View on GitHub"
+repo-text: "GitHub"
 visit: "https://apps.apple.com/app/live-rail-for-hsr/id1550589269"
-visit-text: "Download on the App Store"
+visit-text: "App Store"
 technologies:
   - "SwiftUI"
 permalink: /projects/liverail
