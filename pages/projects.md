@@ -4,6 +4,6 @@ title: Projects
 meta_description: ""
 permalink: /projects
 section: project
-intro_paragraph: ""
+intro_paragraph: Test
 ---
-# Projects
+# Projects Test
