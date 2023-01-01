@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="mx-auto mt-6 mb-12 container bg-amber-50 w-8/12 shadow-xl">
+<div class="mx-auto mt-6 mb-12 container bg-{{ page.color-bg }}-50 w-8/12 shadow-xl">
   <!--  MARK: TITLE -->
   <div
     class="bg-gradient-to-r {{ page.color-s }} {{ page.color-e }} px-6 pt-16 pb-2 justify-between flex"
@@ -10,26 +10,26 @@ layout: default
     <div class="text-6xl font-extrabold">{{ page.title }}</div>
   </div>
   <!-- MARK: TECHNOLOGIES -->
-  <div class="bg-amber-200 px-6 py-0.5 flex space-x-4">
-    <div class="text-base font-semibold text-amber-700 flex">Tech</div>
+  <div class="bg-{{ page.color-bg }}-200 px-6 py-0.5 flex space-x-4">
+    <div class="text-base font-semibold text-{{ page.color-bg }}-700 flex">Tech</div>
     {% for tech in page.technologies %}
-    <div class="text-base font-normal text-amber-600 flex">{{ tech }}</div>
+    <div class="text-base font-normal text-{{ page.color-bg }}-600 flex">{{ tech }}</div>
     {% endfor %}
   </div>
 
   <!-- MARK: VISIT -->
-  <div class="bg-amber-100 px-6 py-0.5 flex space-x-4">
-    <div class="text-base font-semibold text-amber-700 flex">Links</div>
+  <div class="bg-{{ page.color-bg }}-100 px-6 py-0.5 flex space-x-4">
+    <div class="text-base font-semibold text-{{ page.color-bg }}-700 flex">Links</div>
     {% if page.live != "" %}
-    <a href="{{ page.live }}" class="text-base font-normal text-amber-600 flex"
+    <a href="{{ page.live }}" class="text-base font-normal text-{{ page.color-bg }}-600 flex"
       >{{ page.live-text }}</a
     >
     {% endif %}
 
-    <a href="{{ page.repo }}" class="text-base font-normal text-amber-600 flex"
+    <a href="{{ page.repo }}" class="text-base font-normal text-{{ page.color-bg }}-600 flex"
       >{{ page.repo-text }}</a
     >
-    <a href="{{ page.visit }}" class="text-base font-normal text-amber-600 flex"
+    <a href="{{ page.visit }}" class="text-base font-normal text-{{ page.color-bg }}-600 flex"
       >{{ page.visit-text }}</a
     >
   </div>

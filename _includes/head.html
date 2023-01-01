@@ -16,6 +16,8 @@
   ></script>
   <script type="text/javascript" src="/assets/main.js"></script>
   <link rel="stylesheet" href="/tailwindcss/tw.css" />
+  <link rel="stylesheet" href="/assets/custom.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
   <script type="text/javascript">
     let iam = [{% for iam in site.data.stuff.iam %}"{{ iam }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
     let third = [{% for third in site.data.stuff.third %}"{{ third }}"{% unless forloop.last %},{% endunless %}{% endfor %}];

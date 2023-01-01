@@ -20,12 +20,16 @@ module.exports = {
   },
   theme: {
     extend: {
+      fontFamily: {
+        'garamond': ['EB Garamond', 'serif']
+      },
       colors: {
         cyan: colors.cyan,
         "light-blue": colors.lightBlue,
         white: colors.white,
         amber: colors.amber,
         lime: colors.lime,
+        blue: colors.blue,
         orange: colors.orange,
       },
       textColor: {
